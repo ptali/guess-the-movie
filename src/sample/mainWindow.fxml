@@ -1,0 +1,74 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="borderPane" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="@style.css"
+            prefWidth="320" prefHeight="300" onKeyPressed="#handleKeyClick">
+
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="_Game">
+                    <MenuItem text="New" onAction="#openNewGame"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="E_xit" onAction="#handleExit" accelerator="X+CTRL"/>
+                </Menu>
+            </MenuBar>
+            <HBox alignment="CENTER">
+                <Label fx:id="gameStateLabel"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <Label fx:id="movieLabel" style="-fx-font-size: 16"/>
+    </center>
+
+    <bottom>
+        <VBox spacing="5" alignment="CENTER">
+            <padding>
+                <Insets bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="Wrong guesses: 0" fx:id="attemptsLabel"/>
+            <HBox alignment="CENTER" spacing="5" fx:id="hbox1">
+                <ToggleButton text="A" onAction="#handleMouseClick"/>
+                <ToggleButton text="B" onAction="#handleMouseClick"/>
+                <ToggleButton text="C" onAction="#handleMouseClick"/>
+                <ToggleButton text="D" onAction="#handleMouseClick"/>
+                <ToggleButton text="E" onAction="#handleMouseClick"/>
+                <ToggleButton text="F" onAction="#handleMouseClick"/>
+                <ToggleButton text="G" onAction="#handleMouseClick"/>
+                <ToggleButton text="H" onAction="#handleMouseClick"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5" fx:id="hbox2">
+                <ToggleButton text="I" onAction="#handleMouseClick"/>
+                <ToggleButton text="J" onAction="#handleMouseClick"/>
+                <ToggleButton text="K" onAction="#handleMouseClick"/>
+                <ToggleButton text="L" onAction="#handleMouseClick"/>
+                <ToggleButton text="M" onAction="#handleMouseClick"/>
+                <ToggleButton text="N" onAction="#handleMouseClick"/>
+                <ToggleButton text="O" onAction="#handleMouseClick"/>
+                <ToggleButton text="P" onAction="#handleMouseClick"/>
+                <ToggleButton text="Q" onAction="#handleMouseClick"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5" fx:id="hbox3">
+                <ToggleButton text="R" onAction="#handleMouseClick"/>
+                <ToggleButton text="S" onAction="#handleMouseClick"/>
+                <ToggleButton text="T" onAction="#handleMouseClick"/>
+                <ToggleButton text="U" onAction="#handleMouseClick"/>
+                <ToggleButton text="V" onAction="#handleMouseClick"/>
+                <ToggleButton text="W" onAction="#handleMouseClick"/>
+                <ToggleButton text="X" onAction="#handleMouseClick"/>
+                <ToggleButton text="Y" onAction="#handleMouseClick"/>
+                <ToggleButton text="Z" onAction="#handleMouseClick"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
